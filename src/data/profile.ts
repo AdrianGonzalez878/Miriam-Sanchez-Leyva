@@ -1,0 +1,207 @@
+export const profile = {
+  name: "Ma. Azeret Leyva Gómez",
+  shortName: "Azeret Leyva",
+  greeting: "Hola, soy",
+  title: "Contadora · Representante de Leyva Bakery",
+  profession: "Contadora",
+  business: "Leyva Bakery",
+  tagline: "Repostería de autor",
+  location: "Oaxaca de Juárez, Oaxaca",
+  neighborhood: "Libertad de Prensa, U. Hab. Ricardo Flores Magón",
+  since: "2022",
+  yearsInBusiness: "1 año en el negocio",
+  phone: "9514026753",
+  phoneDisplay: "+52 951 402 6753",
+  phoneTel: "+529514026753",
+  whatsapp: "529514026753",
+  instagram: "leyva_bakery",
+  instagramUrl: "https://www.instagram.com/leyva_bakery/",
+  website: "https://leyvabakery.framer.website/",
+  menuUrl:
+    "https://drive.google.com/file/d/1d5RPb77nt6ZjiyAY_7KBbd0lbbUuh-Vc/view",
+  email: "",
+  /** Sustituir cuando tengas foto de Azeret */
+  photo: "/images/leyva-bakery-logo.png",
+  logo: "/images/leyva-bakery-logo.png",
+  hero: "/images/hero.jpg",
+  successKey: "Constancia, disciplina y capacitación constante",
+  valueProposition: {
+    headline:
+      "Creamos pasteles y postres de autor que convierten cada celebración en una experiencia única.",
+    body: "Diseñamos cada pieza de manera personalizada, cuidando desde la estética hasta el sabor, con recetas elaboradas artesanalmente y rellenos y mermeladas preparados desde cero con fruta natural.",
+    punchline:
+      "No solo hacemos un pastel: creamos una pieza pensada especialmente para tu historia, tu ocasión y tu estilo.",
+  },
+  about: {
+    eyebrow: "Sobre mí",
+    headline: "Detrás del negocio, una persona.",
+    body: "Soy contadora y la representante de Leyva Bakery. Mi trayectoria incluye roles como contadora general, jefa de unidad de recursos financieros y directora administrativa. Hoy canalizo esa experiencia para posicionar la marca y acompañar cada pedido con cercanía y orden.",
+    body2:
+      "Mi deseo es desarrollarme como empresaria y ayudar a mi hija Miriam a crecer como chef y empresaria. Juntas impulsamos una repostería de autor hecha con disciplina, creatividad y mucho cariño.",
+    secret:
+      "Algo que pocos saben: estoy estudiando un diplomado en marketing.",
+    facts: [
+      { label: "Ciudad", value: "Oaxaca de Juárez" },
+      { label: "Profesión", value: "Contadora" },
+      { label: "Familia", value: "Hija chef (24) · Hijo (22) · Soltera" },
+      { label: "Mascotas", value: "Dos perritos: Pinto y Vaquita" },
+      {
+        label: "Aficiones",
+        value: "Lectura, caminata, danza y música",
+      },
+      {
+        label: "Clave del éxito",
+        value: "Constancia, disciplina y capacitación constante",
+      },
+    ],
+  },
+  chef: {
+    eyebrow: "El corazón creativo",
+    name: "Miriam Leyva",
+    title: "Chef repostera · Mi hija",
+    photo: "/images/miriam-portrait.png",
+    body: "Miriam es la chef detrás de cada creación de Leyva Bakery. Graduada en gastronomía, transforma momentos especiales en recuerdos inolvidables con diseños personalizados, flores naturales y sabor artesanal.",
+  },
+  idealClients: {
+    eyebrow: "Clientes ideales",
+    headline: "Si conoces a alguien así, conectemos.",
+    intro: "Estas son las personas y empresas a las que mejor puedo ayudar.",
+    seek: [
+      "Personas que quieran dar un obsequio personalizado a alguien especial",
+      "Familiares, amigos o colaboradores que celebran con intención",
+      "Planeadores de eventos y wedding planners",
+      "Salones de eventos",
+      "Jefes de recursos humanos, gerentes generales y propietarios de empresas",
+      "Dependencias de gobierno que necesitan un pastel memorable",
+    ],
+    problems: [
+      "Coordino el pedido y la atención directa para que la experiencia sea clara y cercana",
+      "Entregamos un pastel personalizado que respeta el diseño pedido y eleva el sabor",
+      "Convertimos la celebración en una pieza única, no en un postre genérico",
+    ],
+    signals: [
+      "Alguien que busca un regalo personalizado y con significado",
+      "Personas que llegan por Instagram o por recomendación",
+      "Quien necesita un pastel de boda, cumpleaños o evento corporativo con diseño exacto",
+      "Empresas o áreas de RH que quieren obsequiar con detalle",
+    ],
+  },
+  clients: {
+    eyebrow: "Experiencia",
+    headline: "Momentos que han confiado en nosotros.",
+    intro:
+      "Algunas celebraciones recientes. Casi todos llegan por Instagram o recomendación.",
+    items: [
+      { initials: "KB", name: "Pastel de boda · Karla Blasi" },
+      { initials: "SH", name: "Sharon · Cumpleaños" },
+      { initials: "NA", name: "Nashieli · Cumpleaños" },
+      { initials: "XI", name: "Ximena · Pastel floral" },
+      { initials: "GO", name: "Dependencia de gobierno" },
+      { initials: "EV", name: "Eventos empresariales" },
+    ],
+  },
+  testimonials: [
+    {
+      name: "Clientes recientes",
+      text: "El pastel cumplió con sus expectativas.",
+    },
+    {
+      name: "Diseño",
+      text: "Era muy bonito, con el diseño tal como lo pidieron.",
+    },
+    {
+      name: "Sabor",
+      text: "El pastel tenía muy buen sabor.",
+    },
+    {
+      name: "Margarita López",
+      text: "Me encantó, la tartaletita súper rica, crujiente y el relleno con las cerezas delicioso.",
+    },
+    {
+      name: "Andrea Cruz",
+      text: "El pastel red velvet ha sido el mejor que he probado; sin duda volveré a comprarlo.",
+    },
+    {
+      name: "Alondra Pacheco",
+      text: "Me encantaron, son unas obras de arte tus pasteles.",
+    },
+  ],
+  gallery: [
+    { src: "/images/pastel-1.png", alt: "Pastel artesanal Leyva Bakery 1" },
+    { src: "/images/pastel-2.png", alt: "Pastel artesanal Leyva Bakery 2" },
+    { src: "/images/pastel-3.png", alt: "Pastel artesanal Leyva Bakery 3" },
+    { src: "/images/pastel-4.png", alt: "Pastel artesanal Leyva Bakery 4" },
+    { src: "/images/pastel-5.png", alt: "Pastel artesanal Leyva Bakery 5" },
+    { src: "/images/pastel-6.png", alt: "Pastel artesanal Leyva Bakery 6" },
+  ],
+  allies: {
+    eyebrow: "Aliados",
+    headline: "Busco sumar fuerzas con…",
+    intro: "Si encajas en este perfil o conoces a alguien así, hablemos.",
+    items: [
+      "Wedding planners",
+      "Planeadores de eventos",
+      "Salones de eventos",
+      "Jefes de recursos humanos",
+      "Gerentes generales y propietarios de empresas",
+      "Contactos en administración pública",
+      "Proveedores, amigos y referidos BNI",
+    ],
+  },
+  career: {
+    eyebrow: "Trayectoria",
+    headline: "Experiencia que respalda el negocio.",
+    items: [
+      "Contadora general",
+      "Jefa de unidad de recursos financieros",
+      "Directora administrativa",
+      "Administración de recursos humanos, materiales y financieros",
+      "Finanzas personales",
+    ],
+  },
+  horli: {
+    eyebrow: "HORLI",
+    headline: "Habilidades, Objetivos, Redes, Logros, Intereses.",
+    intro: "Una manera honesta de presentarme en una sola mirada.",
+    skills: [
+      "Disciplina",
+      "Organización",
+      "Creatividad",
+      "Administración de recursos humanos, materiales y financieros",
+      "Finanzas personales",
+      "Constancia y capacitación constante",
+    ],
+    goals: [
+      "Posicionar la marca Leyva Bakery",
+      "Crecer como empresarias",
+      "Desarrollarme como empresaria",
+      "Ayudar a mi hija a desarrollarse como chef y empresaria",
+    ],
+    networks: [
+      "Administración pública",
+      "Empresarios",
+      "Proveedores",
+      "Amigos",
+      "BNI y referidos",
+      "Instagram @leyva_bakery",
+    ],
+    achievements: [
+      "Impulsar Leyva Bakery como marca de repostería de autor",
+      "Trayectoria en contabilidad y dirección administrativa",
+      "Clientes que confirman diseño, sabor y expectativa cumplida",
+    ],
+    interests: [
+      "Lectura de diversos temas",
+      "Música y viajes",
+      "Ser directora administrativa (administración pública)",
+      "Ser contadora general de empresa privada",
+    ],
+  },
+  pillars: [
+    "Diseño personalizado",
+    "Atención directa",
+    "Pasteles artesanales",
+    "Flores naturales",
+    "Hecho con amor",
+  ],
+} as const;

@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rose: #d87d81;
+  --color-rose-deep: #c45d62;
+  --color-rose-soft: #e8a4a7;
+  --color-cream: #e8d5b0;
+  --color-cream-soft: #f6eedc;
+  --color-ink: #2c1f20;
+  --color-ink-muted: #6b5556;
+  --color-blush: #faf4f2;
+  --color-white: #ffffff;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Great Vibes", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-blush text-ink font-body antialiased;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-rose) 35%, white);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-lg px-6 md:max-w-3xl lg:max-w-5xl lg:px-10;
+  }
+
+  .section-pad {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.9s ease-out 0.15s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.9s ease-out 0.3s both;
+}
+
+.hero-media {
+  animation: hero-zoom 8s ease-out both;
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.wa-float {
+  animation: soft-pulse 2.8s ease-in-out infinite;
+}
+
+/* Reveal on scroll — visible by default; only animates when JS enables it */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+html.js-anim .reveal {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+html.js-anim .reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+html.js-anim .reveal-delay-1 {
+  transition-delay: 0.08s;
+}
+
+html.js-anim .reveal-delay-2 {
+  transition-delay: 0.16s;
+}
+
+html.js-anim .reveal-delay-3 {
+  transition-delay: 0.24s;
+}
+
+html.js-anim .reveal-scale {
+  transform: translate3d(0, 16px, 0) scale(0.98);
+}
+
+html.js-anim .reveal-scale.is-visible {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.gallery-item img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gallery-item:hover img {
+    transform: scale(1.03);
+  }
+
+  .lift {
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 30px -20px rgba(44, 31, 32, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up,
+  .animate-fade-up-delay,
+  .animate-fade-up-delay-2,
+  .hero-media,
+  .marquee-track,
+  .wa-float {
+    animation: none !important;
+  }
+
+  html.js-anim .reveal,
+  html.js-anim .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .gallery-item img,
+  .lift {
+    transition: none !important;
+  }
+}
