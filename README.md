@@ -1,6 +1,6 @@
-# Perfil digital — Ma. Azeret Leyva Gómez · Leyva Bakery
+# Perfil digital — Miriam Sánchez Leyva · Leyva Bakery
 
-Ficha de presentación estilo BNI para **Azeret Leyva**, representante del negocio. Miriam (su hija) aparece como chef creativa detrás de las creaciones.
+Ficha de presentación estilo BNI para **Miriam Sánchez Leyva**, chef repostera de Leyva Bakery.
 
 ## Stack
 
@@ -35,6 +35,4 @@ Todo el texto, enlaces, clientes, HORLI y galería vive en:
 
 `src/data/profile.ts`
 
-Fotos en `public/images/`:
-- Foto de Azeret → ponla en `public/images/` y actualiza `photo` en `profile.ts`
-- Retrato de Miriam → `miriam-portrait.png`
+Fotos en `public/images/`. Para un retrato más nítido, sustituye `miriam-portrait.png`.

@@ -4,7 +4,7 @@ import Button from "../components/Button.astro";
 import { profile as p } from "../data/profile";
 
 const waUrl = `https://wa.me/${p.whatsapp}?text=${encodeURIComponent(
-  "Hola Azeret, vi tu perfil de Leyva Bakery y me gustaría platicar contigo."
+  "Hola Miriam, vi tu perfil de Leyva Bakery y me gustaría platicar contigo."
 )}`;
 
 const horliBlocks = [
@@ -137,17 +137,13 @@ const horliBlocks = [
       <div
         class="flex flex-col items-center gap-8 reveal sm:flex-row sm:items-start lg:gap-12"
       >
-        <div
-          class="flex h-44 w-44 shrink-0 items-center justify-center rounded-2xl bg-white p-4 ring-4 ring-cream shadow-[0_20px_50px_-20px_rgba(216,125,129,0.55)] md:h-52 md:w-52"
-        >
-          <img
-            src={p.photo}
-            alt={`Logo de ${p.business}`}
-            class="h-full w-full object-contain"
-            width="176"
-            height="176"
-          />
-        </div>
+        <img
+          src={p.photo}
+          alt={`Retrato de ${p.name}`}
+          class="h-44 w-44 shrink-0 rounded-full object-cover object-top ring-4 ring-cream shadow-[0_20px_50px_-20px_rgba(216,125,129,0.55)] md:h-52 md:w-52"
+          width="208"
+          height="208"
+        />
         <div class="text-center sm:text-left">
           <p class="text-xs uppercase tracking-[0.22em] text-rose">
             {p.about.eyebrow}
@@ -167,9 +163,6 @@ const horliBlocks = [
           <p class="mt-4 text-[15px] leading-relaxed text-ink-muted md:text-base">
             {p.about.body2}
           </p>
-          <p class="mt-4 text-[15px] italic leading-relaxed text-rose-deep md:text-base">
-            {p.about.secret}
-          </p>
         </div>
 
         <dl
@@ -187,62 +180,6 @@ const horliBlocks = [
           ))}
         </dl>
       </div>
-    </div>
-  </section>
-
-  <!-- CHEF / HIJA -->
-  <section class="bg-cream-soft section-pad">
-    <div class="section-shell">
-      <p class="text-xs uppercase tracking-[0.22em] text-rose reveal">
-        {p.chef.eyebrow}
-      </p>
-      <div
-        class="mt-6 flex flex-col items-center gap-6 reveal reveal-delay-1 sm:flex-row sm:items-start lg:gap-10"
-      >
-        <img
-          src={p.chef.photo}
-          alt={`Retrato de ${p.chef.name}`}
-          class="h-36 w-36 shrink-0 rounded-full object-cover object-top ring-4 ring-rose/30 md:h-44 md:w-44"
-          width="176"
-          height="176"
-        />
-        <div class="text-center sm:text-left">
-          <h2 class="font-display text-3xl text-ink md:text-4xl">
-            {p.chef.name}
-          </h2>
-          <p class="mt-1 text-sm text-rose-deep md:text-base">{p.chef.title}</p>
-          <p
-            class="mt-4 max-w-2xl text-[15px] leading-relaxed text-ink-muted md:text-base"
-          >
-            {p.chef.body}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAREER -->
-  <section class="bg-blush section-pad !py-12 md:!py-16">
-    <div class="section-shell">
-      <p class="text-xs uppercase tracking-[0.22em] text-rose reveal">
-        {p.career.eyebrow}
-      </p>
-      <h2 class="mt-2 font-display text-3xl text-ink reveal reveal-delay-1 md:text-4xl">
-        {p.career.headline}
-      </h2>
-      <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {p.career.items.map((item, i) => (
-          <li
-            class:list={[
-              "border-l-2 border-rose/40 pl-4 text-sm text-ink-muted reveal md:text-base",
-              i % 3 === 1 ? "reveal-delay-1" : "",
-              i % 3 === 2 ? "reveal-delay-2" : "",
-            ]}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
     </div>
   </section>
 
@@ -623,7 +560,7 @@ const horliBlocks = [
       async function shareProfile() {
         const url = window.location.href;
         const title = `${profileName} — ${business}`;
-        const text = `Conoce el perfil de ${profileName}, representante de ${business}.`;
+        const text = `Conoce el perfil de ${profileName}, chef repostera de ${business}.`;
         try {
           if (navigator.share) {
             await navigator.share({ title, text, url });
@@ -644,19 +581,19 @@ const horliBlocks = [
           "VERSION:3.0",
           `FN:${profileName}`,
           `ORG:${business}`,
-          `TITLE:${jobTitle} · Representante`,
-          `TEL;TYPE=CELL:${phoneTel}`,
-          `URL:${website}`,
-          `X-SOCIALPROFILE;TYPE=instagram:${instagramUrl}`,
-          `NOTE:Leyva Bakery — Repostería de autor en Oaxaca`,
-          "END:VCARD",
-        ];
-        const blob = new Blob([lines.join("\n")], {
-          type: "text/vcard;charset=utf-8",
-        });
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = "azeret-leyva-leyva-bakery.vcf";
+        `TITLE:${jobTitle}`,
+        `TEL;TYPE=CELL:${phoneTel}`,
+        `URL:${website}`,
+        `X-SOCIALPROFILE;TYPE=instagram:${instagramUrl}`,
+        `NOTE:Leyva Bakery — Repostería de autor en Oaxaca`,
+        "END:VCARD",
+      ];
+      const blob = new Blob([lines.join("\n")], {
+        type: "text/vcard;charset=utf-8",
+      });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "miriam-sanchez-leyva-leyva-bakery.vcf";
         a.click();
         URL.revokeObjectURL(a.href);
       }
