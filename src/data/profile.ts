@@ -19,9 +19,10 @@ export const profile = {
   menuUrl:
     "https://drive.google.com/file/d/1d5RPb77nt6ZjiyAY_7KBbd0lbbUuh-Vc/view",
   email: "",
-  photo: "/images/miriam-portrait.png",
+  photo: "/images/miriam-portrait.jpg",
   logo: "/images/leyva-bakery-logo.png",
   hero: "/images/hero.jpg",
+  portrait: "/images/miriam-portrait.jpg",
   valueProposition: {
     headline:
       "Creamos pasteles y postres de autor que convierten cada celebración en una experiencia única.",

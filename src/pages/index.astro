@@ -24,23 +24,20 @@ const horliBlocks = [
   <header class="relative min-h-[100svh] overflow-hidden text-white">
     <img
       src={p.hero}
-      alt="Pasteles artesanales de Leyva Bakery"
+      alt=""
+      aria-hidden="true"
       class="hero-media absolute inset-0 h-full w-full object-cover"
       fetchpriority="high"
     />
     <div
-      class="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/45 to-ink/80"
-    >
-    </div>
-    <div
-      class="pointer-events-none absolute inset-0 hidden bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(44,31,32,0.35)_100%)] lg:block"
+      class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/65 to-ink/85"
     >
     </div>
 
     <div
-      class="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-lg flex-col px-6 pb-10 pt-8 md:max-w-3xl lg:max-w-5xl lg:px-10"
+      class="relative z-10 mx-auto grid min-h-[100svh] w-full max-w-lg grid-cols-1 px-6 pb-10 pt-8 md:max-w-3xl lg:max-w-5xl lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:gap-10 lg:px-10 lg:pb-14"
     >
-      <div class="flex items-center justify-between animate-fade-up">
+      <div class="flex items-center justify-between animate-fade-up lg:col-span-2">
         <p class="text-[11px] uppercase tracking-[0.22em] text-cream/90 md:text-xs">
           Hecho con amor · Desde {p.since}
         </p>
@@ -54,14 +51,27 @@ const horliBlocks = [
       </div>
 
       <div
-        class="mt-auto flex flex-col items-center text-center lg:items-start lg:text-left lg:pb-8"
+        class="mt-8 flex justify-center animate-fade-up-delay lg:order-2 lg:mt-0 lg:justify-end lg:self-center"
+      >
+        <img
+          src={p.portrait}
+          alt={`Retrato de ${p.name}`}
+          class="h-[42vh] max-h-[420px] w-auto rounded-2xl object-cover object-top shadow-[0_30px_60px_-20px_rgba(0,0,0,0.55)] ring-2 ring-cream/40 sm:h-[48vh] lg:h-[68vh] lg:max-h-none lg:rounded-3xl"
+          width="681"
+          height="1024"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div
+        class="mt-auto flex flex-col items-center text-center lg:order-1 lg:items-start lg:pb-4 lg:text-left"
       >
         <p
           class="font-script text-4xl text-cream animate-fade-up sm:text-5xl lg:text-6xl"
         >
           Leyva Bakery
         </p>
-        <p class="mt-6 text-sm text-white/75 animate-fade-up-delay md:text-base">
+        <p class="mt-5 text-sm text-white/75 animate-fade-up-delay md:text-base">
           {p.greeting}
         </p>
         <h1
